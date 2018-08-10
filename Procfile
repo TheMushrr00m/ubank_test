@@ -1,1 +1,1 @@
-web: gunicorn api.application:app.api -c gunicorn_cfg.py
+web: gunicorn api.application:app.api -c gunicorn_cfg.py -b 0.0.0.0:$PORT
