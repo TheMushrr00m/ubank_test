@@ -4,10 +4,13 @@ import dependency_injector.providers as providers
 from falcon import API
 
 from api.application.environments.config import CONFIG
+from api.application.middlewares import database
 from api.application.services.service_register import ServiceRegister
 
 
-APP_MIDDLEWARE = []
+APP_MIDDLEWARE = [
+    database.DatabaseMiddleware()
+]
 
 
 class Application(object):
