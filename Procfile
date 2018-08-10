@@ -1,0 +1,1 @@
+web: gunicorn -c gunicorn_cfg.py api.application:app.api
